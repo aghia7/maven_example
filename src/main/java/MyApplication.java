@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 public class MyApplication {
     public static void main(String[] args) {
-        String connectionString = "jdbc:postgresql://localhost:5432/simpledb";
+        String connectionString = "jdbc:postgresql://localhost:5432/postgres";
         ArrayList<User> users = new ArrayList<>();
         Connection con = null;
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection(connectionString, "postgres", "0000");
+            con = DriverManager.getConnection(connectionString, "postgres", "Ilovebil");
 
             String sql = "SELECT id, name, surname, gender FROM users ORDER BY id;";
             Statement stmt = con.createStatement();
